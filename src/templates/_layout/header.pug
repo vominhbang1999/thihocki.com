@@ -1,11 +1,12 @@
 <!-- ////////////// HEADER ////////////// -->
-header.bg-light
+header
 	.container
 		nav.navbar.navbar-expand-lg.navbar-light
 			a.navbar-brand(href="#") 
 				img(src="./img/logo.png", alt="Logo")
+			.mr-auto
 			//- Đây là nút sẽ hiển thị trong mobile
-			button.navbar-toggler(type="button" data-toggle="collapse" data-target="#fullStackMenu" aria-controls="fullStackMenu" aria-expanded="false" aria-label="Toggle navigation")
+			button.navbar-toggler(type="button" data-toggle="collapse" id="maunut" data-target="#fullStackMenu" aria-controls="fullStackMenu" aria-expanded="false" aria-label="Toggle navigation")
 				span.fa.fa-bars
 			#fullStackMenu.collapse.navbar-collapse
 				//- Thuộc tính '.mr-auto' này sẽ đẩy me nu về bên phải 
@@ -25,4 +26,25 @@ header.bg-light
 						a.nav-link(href="about.html") Về chúng tôi
 					li.nav-item
 						a.nav-link(href="contact.html") Liên hệ
+				.mr-auto
+		.logo
+			a.navbar-brand(href="#") 
+				img(src="./img/logo.png", alt="Logo")
+		nav.menu-ngang
+			ul
+				li
+					a(href="#") Trang chủ
+				li
+					a(href="#") Gian hàng
+				li
+					a(href="#") Dịch vụ
+				li
+					a(href="#") Về chúng tôi
+				li
+					a(href="#") Liên hệ
+			.menutoggle
+				i.fa.fa-bars
+			.menuhide
+				i.fa.fa-times
+				//- i.fa.fa-times
 <!-- ////////////// HEADER ////////////// -->

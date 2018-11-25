@@ -5,63 +5,265 @@
 	.owl-carousel
 		// Phần Slider
 		.item
-			position: relative
 			.title
-				+pad(2rem 0)
-				height: 100%
+				padding: 1rem 2rem
 				width: 100%
-				display: flex
-				align-items: center
-			+media-breakpoint-up(md)
-				.title
-					+pos(abs, 0 null null 0)
-					color: $whites
-					+text-shadow()
-					h2
-						+fz(3rem)
-					p 
-						+fz(1.5rem)
-						+lh(2rem)
-		// Phần Control
-		.owl-dots
-			margin-bottom: 2rem
-/////////////////////////////////
-// Phần News
-/////////////////////////////////
-
-.home-news
-	.item 
-		figure
-			.blockimg
-				+bor-rad(10px)
-				overflow: hidden
-				img
+				text-align: center
+				+media-breakpoint-up(md)
+					position: absolute
+					top: 50%
+					+media-breakpoint-down(lg)
+						top: 30%
+					left: 0
 					width: 100%
-			figcaption 
-				margin-top: 1rem
-				h3 
-					+fz(1.1rem)
-					margin-bottom: 0
-				time 
-					+fz(.85rem)
-					color: darken($whites,30%)
-				p 
-					margin-top: .5rem
-					color: darken($whites,50%)
-/////////////////////////////////
-// Phần News
-/////////////////////////////////
+					text-align: center
+					padding: 0 10rem
+					+media-breakpoint-up(lg)
+						padding: 0 20rem
+				h2
+					text-transform: uppercase
+					letter-spacing: 0.3rem
+					color: black
+					font-size: 20px
+					+media-breakpoint-up(md)
+						color: white
+						font-size: 2rem
+					font-family: 'Oswald', sans-serif
+				p
+					color: black
+					font-size: 10px
+					+media-breakpoint-up(md)
+						color: white
+						font-size: 1rem
+					letter-spacing: 0.1rem
+					font-family: 'Oswald', sans-serif
 
-.home-clients
-	.owl-carousel
-		.item 
-			+pad(.5rem)
-		// Phần Control
+				a
+					background-color: #f2c73e
+					border-radius: 25px
+					color: black
+					font-weight: bold
+					padding: 0.6rem 2.3rem
 		.owl-nav
-			margin-bottom: 2rem
-			button 
-				i 
+			display: none
+			+media-breakpoint-down(sm)
+				display: block
+			button.owl-prev,button.owl-next
+				background-color: #f2c73e
+				width: 3rem
+				height: 2rem
+				i
+					color: white
+				&:hover
+					i
+						color: black
+
+		.owl-dots
+			display: block
+			+media-breakpoint-down(sm)
+				display: none
+			bottom: 0
+			width: 100%
+			+media-breakpoint-up(md)
+				position: absolute
+				bottom: 0
+				width: 100%
+			.owl-dot
+				span
+					background-color: #fffbfb
+				&:hover
+				&.active
+					span
+						background-color: #f0f8ff00
+						border: 2px solid #f2c73e
+
+.lock2
+	background-image: url('../img/bg-house.png')
+	background-size: cover
+	padding: 3rem 0
+	.tieude
+		width: 100%
+		text-align: center
+		padding: 2rem 1rem 0 1rem
+		+media-breakpoint-up(md)
+			padding: 2rem 15rem 0 15rem
+		h3
+			width: 100%
+			position: relative
+			padding: 1rem 0
+			&:before
+				content: ''
+				display: block
+				height: 5px
+				width: 100px
+				border-radius: 15px
+				background-color: #f2c73e
+				position: absolute
+				left: 50%
+				bottom: 0
+				transform: translateX(-50%)
+		span
+			color: #f2c73e
+		p
+			color: gray
+	.icon-lock2
+		text-align: center
+		.col-sm-4
+			padding: 0 3rem
+			+media-breakpoint-up(sm)
+				&:hover
+					i
+						color: #f2c73e
+			i
+				font-size: 100px
+			p
+				color: gray
+.lock3
+	background-image: url('../img/travel 3.png')
+	background-size: cover
+	padding: 3rem 0
+	&:before
+		content: ''
+		display: block
+		height: 100%
+		width: 100%
+		background-color: black
+	.box1
+		width: 100%
+		text-align: left
+		h3
+			position: relative
+			padding: 1rem 0
+			color: white
+			&:before
+				content: ''
+				display: block
+				height: 5px
+				width: 100px
+				border-radius: 15px
+				background-color: #f2c73e
+				position: absolute
+				left: 4rem
+				bottom: 0
+				transform: translateX(-50%)
+		span
+			color: #f2c73e
+		p
+			color: white
+		a
+			background-color: #f2c73e
+			border-radius: 25px
+			color: black
+			font-weight: bold
+			padding: 0.6rem 2.3rem
+		p.duoih3
+			color: white
+			font-size: 20px
+			font-family: cursive
+	.box2
+		border: 3px solid #f4c93e 
+		width: 100% 
+		height: 85%
+		margin-top: 3rem
+		border-radius: 3px
+		background: rgba(255,255,255,0.21)
+		.scrollbar
+			margin: 3rem
+			float: left
+			overflow-y: scroll
+			max-height: 250px 
+			color: white
+			&::-webkit-scrollbar
+				width: 6px
+				border-radius: 3px
+				background-color: rgba(255,255,255,05)
+			&::-webkit-scrollbar-thumb
+				background-color: #f4c93e 
+				border-radius: 3px
+.lock4
+	margin-top: 15rem
+	background-color: #f2c73e
+	box-shadow: 0 40px #dbb538
+	.feedback-tieude
+		width: 100%
+		text-align: center
+		padding: 2rem 1rem 0 1rem
+		+media-breakpoint-up(md)
+			padding: 2rem 20rem 0 20rem
+		h3
+			width: 100%
+			position: relative
+			padding: 1rem 0
+			color: black
+			&:before
+				content: ''
+				display: block
+				height: 5px
+				width: 100px
+				border-radius: 15px
+				background-color: #aa8a23
+				position: absolute
+				left: 50%
+				bottom: 0
+				transform: translateX(-50%)
+		p
+			color: black
+	.feedback-image
+		figure
+			display: flex
+			justify-content: center
+			align-items: center
+			img
+				border-radius: 50%
+				width: 200px
+				height: 200px
+		figcaption
+			padding: 2rem 0
+			text-align: center
+			&:hover
+				h5
+					color: white
+				box-shadow: 0 4px #aa8a23
+.lock5
+	margin-top: 5rem
+	.mayanh
+		background-image: url('../img/mayanh.png')
+		background-size: cover
+	.moving
+		.hang1
+			width: 100%
+			text-align: center
+			padding: 0 2rem
+			h3
+				width: 100%
+				position: relative
+				padding: 1rem 0
+				&:before
+					content: ''
 					display: block
-					width: 2rem
-					height: 2rem
-					+lh(2rem)
+					height: 5px
+					width: 100px
+					border-radius: 15px
+					background-color: #f2c73e
+					position: absolute
+					left: 50%
+					bottom: 0
+					transform: translateX(-50%)
+			span
+				color: #f2c73e
+			p
+				color: black
+				font-weight: bold
+		.hang2
+			padding: 1rem
+			.col-sm-3
+				display: flex
+				justify-content: center
+				align-items: center
+				i
+					font-size: 40px
+					color: gray
+			p
+				color: gray 
+
+

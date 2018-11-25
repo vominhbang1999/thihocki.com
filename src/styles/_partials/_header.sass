@@ -1,10 +1,102 @@
 header
-	.navbar
-		+pad(null 0)
-	.navbar-brand
-		img 
-			max-height: 2rem
-	+media-breakpoint-up(md)
-		.navbar-brand
-			img 
-				max-height: 3rem
+	nav.menu-ngang
+		display: none
+	+media-breakpoint-down(sm)
+		nav.navbar
+			display: none
+		nav.menu-ngang
+			ul
+				list-style-type: none
+				padding: 4rem 3rem
+				li
+					margin: 20px 0
+					background: #f2c73e
+					border-radius: 5rem
+					padding: 0.5rem
+					text-align: center
+					font-size: 15px
+					font-weight: 500
+					&:hover
+						box-shadow: 0 0 20px black
+						width: 100%
+					a
+						color: black
+						text-decoration: none
+			display: block
+			width: 100%
+			height: 100%
+			background-color: #f2c73e
+			position: fixed
+			top: 1rem
+			right: 0
+			transition: .5s all ease-in-out
+			transform: translateX(100%)
+			z-index: 12345
+			&.active
+				transform: translateY(0%)
+			.menutoggle
+				width: 40px
+				height: 40px
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: #f2c73e
+				transform: translateX(-100%)
+				position: absolute
+				top: 0rem
+				cursor: -webkit-grab
+			.menuhide
+				width: 40px
+				height: 40px
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: #f2c73e
+				transform: translateX(-100%)
+				position: absolute
+				top: 0.5rem
+				right: -2.5rem
+				cursor: -webkit-grab
+	.logo
+		display: block
+		position: absolute
+		z-index: 12
+		+media-breakpoint-up(md)
+			display: none
+	nav.navbar
+		position: fixed
+		top: 0
+		right: 0
+		z-index: 1234567
+		width: 100%
+		a
+			img
+				+media-breakpoint-up(sm)
+					margin-left: 10rem
+				+media-breakpoint-up(md)
+					margin-left: 15rem
+		#fullStackMenu
+			ul.navbar-nav
+				li.nav-item
+					padding: 0 1rem
+					border-radius: 25px
+					margin-left: 2px
+					margin-top: 2px
+					+media-breakpoint-down(sm)
+						margin-bottom: 2px
+					&:hover,
+					&.active
+						background-color: #f2c73e
+						a.nav-link
+							color: black
+					a.nav-link
+						color: white
+						font-size: 15px
+						font-weight: bold
+		#maunut
+			color: rgb(255, 255, 255) !important
+			border-color: rgb(255, 255, 255) !important
+
+
+.maunen
+	background-color: #05050563
